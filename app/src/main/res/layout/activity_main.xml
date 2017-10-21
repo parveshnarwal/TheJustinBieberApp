@@ -1,0 +1,55 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@color/colorPrimary"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabSelectedTextColor="@color/colorTextPrimary"
+        app:tabTextColor="@color/colorTextDisable">
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab1"
+            android:icon="@drawable/tab_call_selector"
+            style="@style/tab_item"
+            android:text="@string/tab1" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab2"
+            android:icon="@drawable/tab_chat_selector"
+            style="@style/tab_item"
+            android:text="@string/tab2" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tab3"
+            android:icon="@drawable/tab_contacts_selector"
+            style="@style/tab_item"
+            android:text="@string/tab3" />
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tablayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/ic_chat"/>
+
+</RelativeLayout>
